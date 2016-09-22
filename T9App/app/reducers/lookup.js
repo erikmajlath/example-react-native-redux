@@ -11,7 +11,8 @@ const lookup = (state = initialState, action = {}) => {
     case types.CLEAR_MATCHES:
       return {
         ...state,
-        matches: []
+        matches: [],
+        isFetching: false
       }
     case types.REQUEST_MATCHES:
       return {

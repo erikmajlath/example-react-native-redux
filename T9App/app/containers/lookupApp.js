@@ -8,8 +8,7 @@ class LookupApp extends React.Component {
   render() {
     return (
       <Lookup
-        word={this.props.word}
-        matches={this.props.matches}
+        lookup={this.props.lookup}
         {...this.props.actions}/>
     )
   }
@@ -17,8 +16,7 @@ class LookupApp extends React.Component {
 
 const stateToProps = (state) => {
   return {
-    word: state.lookup.word,
-    matches: state.lookup.matches
+    lookup: state.lookup,
   }
 }
 
